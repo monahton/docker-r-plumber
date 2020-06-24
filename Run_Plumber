@@ -1,0 +1,8 @@
+# Executable file to start container with R Plumber API and RStudio
+# This script is used to demonstrate development steps
+
+# Environment to develop [e.g. Open with Safari browser]
+docker run --rm -p 8787:8787 -e USER=myself -e PASSWORD=guest -v /Users/vladdsm/Documents/GitHub/docker-r-plumber:/home/myself/r-studio/docker-r-plumber vladdsm/docker-r-studio
+
+# API publisher
+docker run --rm -p 8777:8787 vladdsm/docker-r-plumber
